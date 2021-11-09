@@ -1,0 +1,114 @@
+@font-face
+  /*Téléchargement de la police Shrikhand et Roboto */
+    {
+    font-family: 'Shrikhand';
+    src: url('../../fonts/Shrikland/shrikhand-regular.woff'), url('../../fonts/Shrikland/shrikhand-regular.woff2');
+     
+}
+
+@font-face{
+    font-family: 'Roboto';
+    src: url('../../fonts/Roboto/roboto-regular-webfont.woff'),url('../../fonts/Roboto/roboto-regular-webfont.woff2');
+}
+
+/* Header */ 
+
+*{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family:'Roboto',verdana;
+}
+
+
+.header{
+    display: flex;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+        &__logo{
+            font-family: 'Shrikhand', verdana;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+        }
+}
+
+.local{
+    background: linear-gradient(#d3d3d3 0,01px , rgb(236, 235, 235) 5%);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        &__texte{
+            display: flex;
+            flex-direction: row;            
+            width: 200px;
+            font-size: 20px;
+            justify-content: center;
+            color: rgb(94, 92, 92);
+        }
+        i{
+            width: 20px;
+            padding-top:3px;
+        }
+}
+
+.reservez{
+    background: rgb(245, 244, 244);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+        &__titre{
+            padding-top: 30px;
+            display: flex;
+            justify-content: center;
+                &__2{
+                    display: flex;
+                    justify-content: center;                    
+                    font-size: 18px;
+                    font-weight: lighter;
+                    color: gray;     
+                    padding-top: 5px;                
+                    }
+        }
+}
+
+.btn-reservez{
+    padding-top: 20px;
+    display: flex; 
+    justify-content: center;   
+        button{
+            display: flex;
+            justify-content: center;
+            width: 280px;
+            font-size: 20px;
+            margin-bottom: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: 0px solid transparent;
+            border-radius: 100px;
+            color: white;
+            background: rgb(255,140,245);
+            background: linear-gradient(175deg, rgba(255,140,245,1) 30%, rgba(99,44,142,1) 99%);
+    }
+}
+
+.tuto{
+    display: flex;
+    justify-content: center;
+    
+        .container{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+        &__titre{
+            padding: 10px 0px 20px 10px;
+        }
+        &__etapes{
+            border:0px solid transparent ;
+        }
+}
