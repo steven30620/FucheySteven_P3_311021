@@ -17,6 +17,15 @@
   font-family: 'Roboto',verdana;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,6 +148,10 @@
   background: linear-gradient(175deg, #ff8cf5 30%, #632c8e 99%);
 }
 
+ol {
+  list-style: none;
+}
+
 .tuto {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,24 +161,218 @@
           justify-content: center;
 }
 
-.tuto .container {
+.tuto__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 200px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.tuto__titre {
+  padding: 10px 0px 20px 10px;
+  width: 200px;
+  font-weight: bold;
+}
+
+.tuto__etapes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 25px;
+}
+
+.tuto__etape {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 8px 10px 8px 20px;
+  width: 30%;
+  height: 60px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background: #f6f6f6;
+  -webkit-box-shadow: 1px 2px 8px 1px rgba(216, 216, 216, 0.56);
+          box-shadow: 1px 2px 8px 1px rgba(216, 216, 216, 0.56);
+}
+
+.tuto__icon {
+  width: 20px;
+  margin-right: 10px;
+  margin-left: 20px;
+  color: #949494;
+}
+
+.tuto__text {
+  width: 80%;
+  font-weight: bold;
+}
+
+.restaurants {
+  background: #f6f6f6;
+  height: 800px;
+}
+
+.restaurants container {
+  margin-right: 10%;
+  margin-left: 10%;
+  width: 100%;
+}
+
+.restaurants__titre {
+  padding: 20px 0px 20px 5%;
+  width: 200px;
+  font-weight: bold;
+}
+
+.cartes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.carte {
+  width: 40%;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.tuto__titre {
-  padding: 10px 0px 20px 10px;
+.carte__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 250px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
-.tuto__etapes {
+.carte__nouveau1 {
+  position: absolute;
+  background: #99E2D0;
+  width: 85px;
+  padding-left: 10px;
+  color: #328570;
+  left: 750px;
+  top: 620px;
+  font-size: 20px;
+}
+
+.carte__nouveau2 {
+  position: absolute;
+  background: #99E2D0;
+  width: 85px;
+  padding-left: 10px;
+  color: #328570;
+  left: 1700px;
+  top: 620px;
+  font-size: 20px;
+}
+
+.carte__footer {
+  background: white;
   border: 0px solid transparent;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -webkit-box-shadow: 1px 2px 8px 1px rgba(216, 216, 216, 0.56);
+          box-shadow: 1px 2px 8px 1px rgba(216, 216, 216, 0.56);
+  height: 70px;
+}
+
+.carte__contenue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.carte__titre {
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 80%;
+}
+
+.carte__sous-titre {
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.footer .container {
+  height: 200px;
+  background: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__logo {
+  color: white;
+  font-family: 'Shrikhand','verdana';
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 150px;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer__icon {
+  width: 20px;
+  margin-right: 8px;
+  margin-left: 5px;
+}
+
+.footer__list-contenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 20px;
+  margin-top: 5px;
+  width: 300px;
 }
 /*# sourceMappingURL=style.css.map */
