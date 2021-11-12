@@ -4,109 +4,125 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://kit.fontawesome.com/7d17636476.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="./styles/scss/style.scss">  
+<link rel="stylesheet" href="./styles/a_la_francaise/style-alafrancaise.css">  
 <link rel="icon" href="./img/favicon.ico" />
-<title>La note enchantée</title>
-<meta name="title" content="La palette du gout">
+<title>À la française</title>
+<meta name="title" content=" A la française">
 
 
 </head>
 
 <header class="header">
+    <a class="header__btn" href="./index.html"><i class="fas fa-arrow-left fa-2x"></i> </a>
     <h1 class="header__logo">ohmyfood</h1>
-    <div class="btn-retour">       </div>
+    
 </header>
 
 <body>
 
-    <section class="background">
-      <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant_la_note_enchantée">  
-    </section>
+    <div class="illustration">
+      <img class="illustration__img" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant_la_note_enchantee">  
+    </div>
 
+<div class="central">
     <section class="menu">
         <div class="container">
-            <h2 class="restaurant_titre">La palette du goût<span id="fav_icon"> coeur  </span></h2>
-                
-            <h2 class="menu__titre">entrées</h2> 
-            
+
+            <h2 class="menu__restaurant-nom">À la française</h2>  
+        <div class="menu__cartes">   
             <div class="menu__entrees">
-                <div id="menu__carte">
-                    <div id="menu__carte__titre">Ravioles de foie gras</div>
-                    <div id="menu__carte__sous-titre">Accompagnés de leur crème à la truffe </div>
-                    <div id="menu__carte__prix">25€</div>
-                </div>
+                <h2 class="menu__titre">entrées</h2>
+                    <div class="menu__carte">
+                        <div class="menu__carte_gauche">
+                            <div class="menu__carte__titre">Tartare de poulpe acidulé</div>
+                            <div class="menu__carte__sous-titre">Aux zestes d'orange</div>
+                        </div>
+                        <div class="menu__carte__prix">25€</div>
+                    </div>
 
-                <div id="menu__carte">
-                    <div id="menu__carte__titre">Caviar osciètre </div>
-                    <div id="menu__carte__sous-titre">Sur blini à la farine de blé noir</div>
-                    <div id="menu__carte__prix">35€</div>
-                </div>
+                    <div class="menu__carte">
+                        <div class="menu__carte_gauche">
+                            <div class="menu__carte__titre">Velouté de légumes d'antan</div>
+                            <div class="menu__carte__sous-titre">Carotte, panais, topinambour</div>
+                        </div>
+                        <div class="menu__carte__prix">35€</div>
+                    </div>
 
-                <div id="menu__carte">
-                    <div id="menu__carte__titre">Homard et espuma de potiron </div>
-                    <div id="menu__carte__sous-titre">Mariné aux zestes d'orange</div>
-                    <div id="menu__carte__prix">20€</div>
-                </div>
-
-                <div id="menu__carte">
-                    <div id="menu__carte__titre">Foie gras de canard cuit entier</div>
-                    <div id="menu__carte__sous-titre">Confiture de figue et pain toasté</div>
-                    <div id="menu__carte__prix">35€</div>
-                </div>
+                    <div class="menu__carte">
+                        <div class="menu__carte_gauche">
+                            <div class="menu__carte__titre">Soupe à l'oignon</div>
+                            <div class="menu__carte__sous-titre">Revisitée</div>
+                        </div>
+                        <div class="menu__carte__prix">20€</div>
+                    </div>
             </div>
 
-            <h2 class="menu__titre">PLATS</h2>    
+                
 
             <div class="menu__plats">
-                <div id="menu__carte">
-                    <div id="menu__carte__titre"> Noix de coquilles Saint-Jacques</div>
-                    <div id="menu__carte__sous-titre">Sur lit de purée de céleri-rave</div>
-                    <div id="menu__carte__prix">40€</div>
-                </div>
+                <h2 class="menu__titre">PLATS</h2>
+                    <div class="menu__carte">
+                        <div class="menu__carte_gauche">
+                            <div class="menu__carte__titre"> Coquilles Saint-Jacques</div>
+                            <div class="menu__carte__sous-titre">Accompagnées d'une purée de panais</div>
+                        </div>
+                        <div class="menu__carte__prix">40€</div>
+                    </div>
 
-                <div id="menu__carte">
-                    <div id="menu__carte__titre">Langoustine poêlée </div>
-                    <div id="menu__carte__sous-titre">Purée de patate douce</div>
-                    <div id="menu__carte__prix">35€</div>
-                </div>
+                    <div class="menu__carte">
+                        <div class="menu__carte_gauche">
+                            <div class="menu__carte__titre">Magret de canard</div>
+                            <div class="menu__carte__sous-titre">Et parmentier de pommes de terre</div>
+                        </div>
+                        <div class="menu__carte__prix">35€</div>
+                    </div>
 
-                <div id="menu__carte">
-                    <div id="menu__carte__titre">Mijoté de queue de boeuf</div>
-                    <div id="menu__carte__sous-titre">Et riz sauvage aux zestes de citron</div>
-                    <div id="menu__carte__prix">44€</div>
-                </div>
+                    <div class="menu__carte">
+                        <div class="menu__carte_gauche">
+                            <div class="menu__carte__titre">Pigeonneau d’Ille-et-Vilaine</div>
+                            <div class="menu__carte__sous-titre">Sur son lit de gnocchis aux légumes</div>
+                        </div>
+                        <div class="menu__carte__prix">44€</div>
+                    </div>
 
             </div>    
 
-            <h2 class="menu__titre">DESSERTS</h2>
-
             <div class="menu__desserts">
 
-                <div id="menu__carte">
-                    <div id="menu__carte__titre">Macaron noisette et chocolat</div>
-                    <div id="menu__carte__sous-titre">Glace au caramel brun et sel de Guérande</div>
-                    <div id="menu__carte__prix">18€</div>
-                </div>
+                <h2 class="menu__titre">DESSERTS</h2>
+                    <div class="menu__carte">
+                        <div class="menu__carte_gauche">
+                            <div class="menu__carte__titre">Pétales de violettes glacés</div>
+                            <div class="menu__carte__sous-titre">Et purée de noisettes</div>
+                        </div>
+                        <div class="menu__carte__prix">18€</div>
+                    </div>
 
-                <div id="menu__carte">
-                    <div id="menu__carte__titre">Baba au rhum revisité </div>
-                    <div id="menu__carte__sous-titre">Avec son coulis de citron</div>
-                    <div id="menu__carte__prix">22€</div>
-                </div>
+                    <div class="menu__carte">
+                        <div class="menu__carte_gauche">
+                            <div class="menu__carte__titre">Fondant au chocolat</div>
+                            <div class="menu__carte__sous-titre">Revisité</div>
+                        </div>
+                        <div class="menu__carte__prix">22€</div>
+                    </div>
 
-                <div id="menu__carte">
-                    <div id="menu__carte__titre">Tarte au citron meringuée  </div>
-                    <div id="menu__carte__sous-titre">Déstructurée</div>
-                    <div id="menu__carte__prix">23€  </div>
-                </div>
+                    <div class="menu__carte">
+                        <div class="menu__carte_gauche">
+                            <div class="menu__carte__titre">Millefeuille croustillant</div>
+                            <div class="menu__carte__sous-titre">Myrtilles et pâte d’amande</div>
+                        </div>
+                        <div class="menu__carte__prix">23€  </div>
+                    </div>
 
             </div>
-
-            <div class="btn__commander"> Commander</div>
+        </div>
+            <div class="footer-menu">
+                <button class="footer__menu__btn"> Commander</button>
+            </div>
         </div>
 
     </section>
-
+</div>
     
 </body>
 
