@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://kit.fontawesome.com/7d17636476.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="./styles/scss/style.css">  
+<link rel="stylesheet" href="./styles/Main/scss/style-main.css">  
 <link rel="icon" href="./img/favicon.ico" />
 <title>Accueil - ohmyfood!</title>
 <meta name="title" content="Accueil - ohmyfood!">
@@ -35,17 +35,17 @@
             <h2 class="tuto__titre">Fonctionnement</h2>
                 <ol class="tuto__etapes">
 
-                    <li class="tuto__etape">
+                    <li class="tuto__etape tuto__etape1">
                         <i class="tuto__icon tuto__icon__1 fas fa-mobile-alt"></i>
                         <span class="tuto__text">Choisissez un restaurant</span>
                     </li>
 
-                    <li class="tuto__etape">
+                    <li class="tuto__etape tuto__etape2">
                         <i class="tuto__icon tuto__icon__2 fas fa-list-ul"></i>
                         <span class="tuto__text">Composez votre menu</span>
                     </li>
 
-                    <li class="tuto__etape">
+                    <li class="tuto__etape tuto__etape3">
                         <i class="tuto__icon tuto__icon__3 fas fa-store"></i>
                         <span class="tuto__text">Dégustez au restaurant</span>
                     </li>
@@ -63,14 +63,14 @@
                 <a class="carte" href="./la-palette-du-gout.html">                
                     <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant_la_palette_du_gout" class="carte__img">
                     
-                    <span class="carte__nouveau1">Nouveau</span>
+                    <span class="carte__nouveau carte__nouveau1">Nouveau</span>
                         <div class="carte__footer">
                             <div class="carte__contenu">
                                 <h3 class="carte__titre">La palette du goût</h3>
                                 <span class="carte__sous-titre">Ménilmontant</span>
                             </div>      
                             <div class="carte__btn">
-                                <!-- icon coeur ici  -->
+                                <input type="checkbox" id="fav_icon"  class="far fa-heart fa-2x">
                             </div>
                         </div>
                 </a>
@@ -78,14 +78,14 @@
                 <a class="carte" href="./la-note-enchantee.html">               
                     <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant_la_note_enchantee" class="carte__img">
                     
-                    <span class="carte__nouveau2">Nouveau</span>
+                    <span class="carte__nouveau carte__nouveau2">Nouveau</span>
                         <div class="carte__footer">
                             <div class="carte__contenu">
                                 <h3 class="carte__titre">La note enchantée</h3>
                                 <span class="carte__sous-titre">Charonne</span>
                             </div>      
                             <div class="carte__btn">
-                                <!-- icon coeur ici  -->
+                                <i id="fav_icon" class="far fa-heart fa-2x"></i>
                             </div>
                         </div>
                 </a>
@@ -99,7 +99,7 @@
                                 <span class="carte__sous-titre">Cité Rouge</span>
                             </div>      
                             <div class="carte__btn">
-                                <!-- icon coeur ici  -->
+                                <i id="fav_icon"  class="far fa-heart fa-2x"></i>
                             </div>
                         </div>
                 </a>
@@ -113,7 +113,7 @@
                             <span class="carte__sous-titre">Folie-Méricourt</span>
                         </div>      
                         <div class="carte__btn">
-                            <!-- icon coeur ici  -->
+                            <i id="fav_icon"  class="far fa-heart fa-2x"></i>
                         </div>
                     </div>
                 </a>
