@@ -28,6 +28,7 @@ a:visited {
 
 h2 {
   font-weight: normal;
+  font-size: 28px;
 }
 
 .header {
@@ -109,11 +110,23 @@ h2 {
 }
 
 .menu__restaurant-nom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: 'Shrikhand','verdana';
+  font-size: 35px;
   padding-top: 20px;
   padding-left: 5%;
   margin-bottom: 40px;
   width: 100%;
+}
+
+.menu__fav {
+  width: 10px;
+  margin-left: 40px;
 }
 
 .menu__titre {
@@ -186,19 +199,22 @@ h2 {
 .menu__carte__titre {
   padding-left: 15px;
   padding-top: 5x;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: bolder;
   text-overflow: ellipsis;
 }
 
 .menu__carte__sous-titre {
+  font-size: 18px;
   padding-top: 5px;
   padding-left: 15px;
-  width: 80%;
+  width: 90%;
 }
 
 .menu__carte__prix {
-  padding-left: 10px;
+  font-size: 18px;
+  font-weight: bolder;
+  padding-right: 15px;
   width: 10%;
 }
 
