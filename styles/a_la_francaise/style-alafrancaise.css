@@ -196,7 +196,7 @@
 }
 
 .menu__btn {
-  width: 16px;
+  width: 25px;
   height: 16px;
   margin-right: 30px;
   margin-top: 20px;
@@ -207,7 +207,7 @@
   width: 25px;
   stroke: black;
   fill: #fff;
-  stroke-width: 30;
+  stroke-width: 40;
 }
 
 .menu__btn .icon-like:hover {

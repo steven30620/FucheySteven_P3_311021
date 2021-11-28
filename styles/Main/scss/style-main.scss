@@ -226,6 +226,7 @@ ol{
                 }
             &__text {
                 width: 80%;
+                font-size: 20px;
                 font-weight: bold;
             }     
         
@@ -277,7 +278,7 @@ ol{
         &__footer::before{
             content: "Nouveau";    
             position: relative;
-            top: -320%;
+            top: -250%;
             left: 85%;    
             display: flex;
             justify-content: center;
@@ -296,7 +297,7 @@ ol{
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
             box-shadow:1px 2px 8px 5px rgba(216,216,216,0.56);
-            height: 70px;
+            height: 85px;
         }
         &__contenu,&__contenu1{
             display: flex;
@@ -306,11 +307,13 @@ ol{
             margin-left:-80px ;
         }
         &__titre{
+            font-size: 25px;
             padding-top: 10px ;
             padding-left: 10px;
             width: 80%;
         }
         &__sous-titre{
+            font-size: 22px;
             padding-left: 10px;
             padding-bottom: 10px;
         }
@@ -321,7 +324,7 @@ ol{
 
     .footer{
         .container{
-            height: 200px;
+            height: 250px;
             background: #353535;
             display: flex;
             flex-direction: column;
@@ -330,7 +333,7 @@ ol{
             &__logo{
                 color: white;
                 font-family:'Shrikhand','verdana' ;
-                font-size: 20px;
+                font-size: 30px;
                 margin-left: 20px;
                 margin-top: 20px;
                 margin-bottom: 10px;
@@ -348,9 +351,322 @@ ol{
             &__list-contenu{
                 display: flex;
                 flex-direction: row;
+                font-size: 20px;
                 margin-left: 20px;
                 margin-top: 5px;
                 width: 300px;
             }
             
+    }
+
+
+
+// responsive tablette
+
+    @media all and (max-width:1450px){
+        
+        .tuto{
+            &__titre{
+                font-size: 30px;
+            }
+            display: flex;
+            justify-content: center;
+                &__container{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 450px;
+                    margin-left: 10%;
+                    margin-right: 10%;
+                }                
+                &__etapes{
+                    display: flex;
+                    flex-direction:column;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 25px;
+                    }
+                &__etape{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin: -5px 10px 20px 20px;
+                    width: 70%;
+                    height: 80px;
+                    border: 1px solid transparent;
+                    border-radius: 20px;
+                    background: #f6f6f6;
+                    box-shadow:1px 2px 8px 1px rgba(216,216,216,0.56);
+                        &1::before{
+                            content: "1";
+                            display: flex;                    
+                            align-items: center;
+                            width: 30px;
+                            height: 30px;
+                            background: #9356DC;
+                            border-radius: 100px;
+                            position: relative;
+                            left: -14px;                    
+                        }
+                        &2::before{
+                            content: "2";
+                            display: flex;                    
+                            align-items: center;
+                            width: 30px;
+                            height: 30px;
+                            background: #9356DC;
+                            border-radius: 100px;
+                            position: relative;
+                            left: -14px; 
+                        }
+                        &3::before{
+                            content: "3";
+                            display: flex;                    
+                            align-items: center;
+                            width: 30px;
+                            height: 30px;
+                            background: #9356DC;
+                            border-radius: 100px;
+                            position: relative;
+                            left: -14px; 
+                        }
+                    }
+                    
+                    &__text {
+                        width: 80%;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }     
+                
+            }
+        
+        .restaurants{
+            background: #f6f6f6;
+            height: 1700px;
+            width: 100%;
+            .container{
+                margin: 0;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            &__titre{
+                padding: 20px;
+            }
+        
+        }
+        
+        .cartes{
+            width:95%;
+            margin:0px;
+            display: flex;
+            align-items:center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;    
+            
+        }
+        
+        .carte{
+            width: 80%;
+            height: 400px;  
+            display: flex;
+            flex-direction: column;  
+                &__footer::before{
+                    content: "Nouveau";    
+                    position: relative;
+                    top: -300%;
+                    left: 85%;    
+                    display: flex;
+                    justify-content: center;
+                    background: #99E2D0;
+                    width: 85px;
+                    height: 30px;
+                    padding-left: 2px;
+                    padding-right: 2px;
+                    color: #328570;
+                    font-size: 20px;    
+                }
+                &__footer,&__footerBIS{
+                    display: flex;
+                    background: white;
+                    border: 0px solid transparent;
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    box-shadow:1px 2px 8px 5px rgba(216,216,216,0.56);
+                    height: 85px;
+                }
+                &__contenu,&__contenu1{
+                    display: flex;
+                    flex-direction: column;
+                }
+                &__contenu1{
+                    margin-left:-80px ;
+                }
+                &__titre{
+                    padding-top: 10px ;
+                    padding-left: 10px;
+                    width: 80%;
+                }
+                &__sous-titre{
+                    padding-left: 10px;
+                    padding-bottom: 10px;
+                }
+            }        
+        }
+
+
+// Responsive téléphone
+
+
+@media all and(max-width:800px){
+    
+    .tuto{
+        &__titre{
+            font-size: 30px;
+        }
+        display: flex;
+        justify-content: center;
+            &__container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 450px;
+                margin-left: 10%;
+                margin-right: 10%;
+            }                
+            &__etapes{
+                display: flex;
+                flex-direction:column;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 25px;
+                }
+            &__etape{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin: -5px 10px 20px 20px;
+                width: 70%;
+                height: 80px;
+                border: 1px solid transparent;
+                border-radius: 20px;
+                background: #f6f6f6;
+                box-shadow:1px 2px 8px 1px rgba(216,216,216,0.56);
+                    &1::before{
+                        content: "1";
+                        display: flex;                    
+                        align-items: center;
+                        width: 30px;
+                        height: 30px;
+                        background: #9356DC;
+                        border-radius: 100px;
+                        position: relative;
+                        left: -14px;                    
+                    }
+                    &2::before{
+                        content: "2";
+                        display: flex;                    
+                        align-items: center;
+                        width: 30px;
+                        height: 30px;
+                        background: #9356DC;
+                        border-radius: 100px;
+                        position: relative;
+                        left: -14px; 
+                    }
+                    &3::before{
+                        content: "3";
+                        display: flex;                    
+                        align-items: center;
+                        width: 30px;
+                        height: 30px;
+                        background: #9356DC;
+                        border-radius: 100px;
+                        position: relative;
+                        left: -14px; 
+                    }
+                }
+                
+                &__text {
+                    width: 80%;
+                    font-size: 20px;
+                    font-weight: bold;
+                }     
+            
+        }
+    
+    .restaurants{
+        background: #f6f6f6;
+        height: 1700px;
+        width: 100%;
+        .container{
+            margin: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        &__titre{
+            padding: 20px;
+        }
+    
+    }
+    
+    .cartes{
+        width:95%;
+        margin:0px;
+        display: flex;
+        align-items:center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;    
+        
+    }
+    
+    .carte{
+        width: 80%;
+        height: 400px;  
+        display: flex;
+        flex-direction: column;  
+            &__footer::before{
+                content: "Nouveau";    
+                position: relative;
+                top: -300%;
+                left: 85%;    
+                display: flex;
+                justify-content: center;
+                background: #99E2D0;
+                width: 85px;
+                height: 30px;
+                padding-left: 2px;
+                padding-right: 2px;
+                color: #328570;
+                font-size: 20px;    
+            }
+            &__footer,&__footerBIS{
+                display: flex;
+                background: white;
+                border: 0px solid transparent;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                box-shadow:1px 2px 8px 5px rgba(216,216,216,0.56);
+                height: 85px;
+            }
+            &__contenu,&__contenu1{
+                display: flex;
+                flex-direction: column;
+            }
+            &__contenu1{
+                margin-left:-80px ;
+            }
+            &__titre{
+                padding-top: 10px ;
+                padding-left: 10px;
+                width: 80%;
+            }
+            &__sous-titre{
+                padding-left: 10px;
+                padding-bottom: 10px;
+            }
+        }        
     }
