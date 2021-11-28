@@ -12,7 +12,7 @@
 }
 // Import des ressource sass
 @import '../src/variables';
-@import '../src/_keyframes';
+@import '../src/keyframes';
 @import '../src/placeholders';
 // decoration de la checkbox
 .menu-check{
@@ -110,7 +110,7 @@ h2{
     } 
     &__restaurant-nom{
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         font-family: 'Shrikhand','verdana';
         font-size: 35px;
         padding-top: 20px;
@@ -118,9 +118,11 @@ h2{
         margin-bottom: 40px;
         width: 100%;
     }
-    &__fav{
-        width: 10px;
-        margin-left: 40px;
+    &__btn{
+        @extend %btn-fav;
+        position:relative;
+        top: -18px;
+        left: 20px;
     }
     &__titre{
         text-transform:uppercase;
@@ -243,8 +245,7 @@ height: 570px;
             margin-left: 20px;
             margin-top: 20px;
             margin-bottom: 10px;
-            width: 150px;
-            
+            width: 150px;            
         }
         a{
             color: white;
@@ -264,33 +265,3 @@ height: 570px;
         
 }
 
-
-// animation
-
-
-
-@keyframes slide-right {
-    
-    0% {
-        transform: translateX(40px)
-    }
-
-    90% {
-        transform: translateX(-10px)
-    }
-
-    100% {
-        transform: translateX(0px)
-    }
-}
-
-@keyframes rotation {
-    
-    0% {
-        transform: rotate(-360deg)
-    }
-
-    100% {
-        transform: rotate(0)
-    }
-}

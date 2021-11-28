@@ -11,6 +11,10 @@
     src: url('../../../fonts/Roboto/roboto-regular-webfont.woff'),url('../../../fonts/Roboto/roboto-regular-webfont.woff2');
 }
 
+// Import des resssource sass
+@import '../../src/variables';
+@import '../../src/keyframes';
+@import '../../src/placeholders';
 // loader
 
 // .box-loader{
@@ -311,56 +315,9 @@ ol{
             padding-bottom: 10px;
         }
         &__btn{
-            width: 16px;
-            height: 16px;
-            margin-right: 30px;
-            margin-top: 20px;
-            z-index: 0;
-            .icon-like {
-                width: 25px;
-                stroke: black;
-                fill: #fff;
-                stroke-width: 30;
-                &:hover {
-                    cursor: pointer;
-                    animation: color 1s ease forwards;
-                }
+            @extend %btn-fav;
             }
         }
-
-
-        // ANIMATION DU COEUR
-        @keyframes color {
-            0% {
-                stroke: url(#icon-fill);
-                fill: url(#icon-fill);
-                fill-opacity: 0;
-                transform: scale(1);
-            }
-    
-            50% {
-                transform: scale(1.2);
-            }
-        
-            100% {
-                stroke: url(#icon-fill);
-                fill: url(#icon-fill);
-                fill-opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-
-    }   
-    #fav_icon2{
-        position: relative;
-        top: -33px;
-        z-index: -1;
-        &:hover{
-            color:rgba(255,140,245,1) ;
-            z-index: 1;
-        }
-    }
 
     .footer{
         .container{

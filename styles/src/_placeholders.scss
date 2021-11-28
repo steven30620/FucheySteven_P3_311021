@@ -1,3 +1,24 @@
+%btn-fav{
+    width: 16px;
+    height: 16px;
+    margin-right: 30px;
+    margin-top: 20px;
+    z-index: 0;
+    .icon-like {
+        width: 25px;
+        stroke: black;
+        fill: #fff;
+        stroke-width: 30;
+        &:hover {
+            cursor: pointer;
+            animation: color 1s ease forwards;
+        }
+    }
+}
+
+
+
+
 %menu-food {
     display: flex;
     flex-direction: column;
