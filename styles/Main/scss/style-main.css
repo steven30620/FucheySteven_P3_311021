@@ -881,7 +881,7 @@ ol {
             justify-content: center;
   }
   .tuto__titre {
-    font-size: 30px;
+    font-size: 25px;
   }
   .tuto__container {
     display: -webkit-box;
@@ -895,8 +895,6 @@ ol {
         -ms-flex-align: center;
             align-items: center;
     height: 450px;
-    margin-left: 10%;
-    margin-right: 10%;
   }
   .tuto__etapes {
     display: -webkit-box;
@@ -912,7 +910,7 @@ ol {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-top: 25px;
+    margin-top: 15px;
   }
   .tuto__etape {
     display: -webkit-box;
@@ -925,7 +923,7 @@ ol {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: -5px 10px 20px 20px;
+    margin-top: 10px;
     width: 70%;
     height: 80px;
     border: 1px solid transparent;
@@ -986,7 +984,7 @@ ol {
   }
   .restaurants {
     background: #f6f6f6;
-    height: 1700px;
+    height: 1400px;
     width: 100%;
   }
   .restaurants .container {
@@ -1023,7 +1021,8 @@ ol {
   }
   .carte {
     width: 80%;
-    height: 400px;
+    height: 300px;
+    margin-bottom: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1035,8 +1034,8 @@ ol {
   .carte__footer::before {
     content: "Nouveau";
     position: relative;
-    top: -300%;
-    left: 85%;
+    top: -200%;
+    left: 80%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1083,6 +1082,213 @@ ol {
   .carte__sous-titre {
     padding-left: 10px;
     padding-bottom: 10px;
+  }
+}
+
+@media all and (max-width: 555px) {
+  .reservez {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .reservez__titre {
+    padding-top: 30px;
+    font-size: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .reservez__titre__2 {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 18px;
+    font-weight: lighter;
+    color: gray;
+    padding-top: 5px;
+  }
+  .tuto__icon {
+    position: relative;
+    left: -20px;
+    width: 20px;
+  }
+  .tuto__etape {
+    width: 99%;
+    height: 80px;
+  }
+  .tuto__etape1::before {
+    width: 25px;
+    height: 20px;
+  }
+  .tuto__etape2::before {
+    width: 25px;
+    height: 20px;
+  }
+  .tuto__etape3::before {
+    width: 25px;
+    height: 20px;
+  }
+  .tuto__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    position: relative;
+    left: -22px;
+    width: 100%;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .restaurants {
+    background: #f6f6f6;
+    height: 1400px;
+    width: 100%;
+  }
+  .restaurants .container {
+    margin: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .restaurants__titre {
+    font-size: 25px;
+  }
+  .cartes {
+    width: 95%;
+    margin: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .carte {
+    width: 90%;
+    height: 300px;
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .carte__footer::before {
+    content: "Nouveau";
+    position: relative;
+    top: -220%;
+    left: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #99E2D0;
+    width: 85px;
+    height: 21px;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: #328570;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Roboto','verdana';
+  }
+  .carte__footer, .carte__footerBIS {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: white;
+    border: 0px solid transparent;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -webkit-box-shadow: 1px 2px 8px 5px rgba(216, 216, 216, 0.56);
+            box-shadow: 1px 2px 8px 5px rgba(216, 216, 216, 0.56);
+    height: 85px;
+  }
+  .carte__contenu, .carte__contenu1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .carte__contenu1 {
+    margin-left: -80px;
+  }
+  .carte__titre {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 80%;
+  }
+  .carte__sous-titre {
+    font-size: 18px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media all and (max-width: 470px) {
+  .carte {
+    width: 90%;
+    height: 300px;
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .carte__footer::before {
+    content: "Nouveau";
+    position: relative;
+    top: -220%;
+    left: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #99E2D0;
+    width: 85px;
+    height: 21px;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: #328570;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Roboto','verdana';
   }
 }
 /*# sourceMappingURL=style-main.css.map */
