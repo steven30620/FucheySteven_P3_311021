@@ -268,41 +268,6 @@ a {
   color: black;
 }
 
-.box-loader {
-  z-index: 9999;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(71, 71, 71, 0.322);
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-animation: fade_out 2.5s ease forwards;
-          animation: fade_out 2.5s ease forwards;
-}
-
-.loader {
-  position: fixed;
-  top: 35%;
-  left: 46%;
-  border-top: 16px solid #9356DC;
-  border-right: 16px solid #FF79DA;
-  border-bottom: 16px solid #99E2D0;
-  border-left: 16px solid #f6f6f6;
-  background-color: #a1a1a1;
-  border-radius: 60px;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 1.5s linear infinite;
-          animation: spin 1.5s linear infinite;
-}
-
 /* Header */
 * {
   width: 100%;
@@ -693,6 +658,7 @@ h2 {
             animation: rotation 0.5s ease-in;
   }
   .menu__cartes .btn-food:hover .price {
+    left: -10%;
     -webkit-animation: slide-right 0.4s ease-in;
             animation: slide-right 0.4s ease-in;
     -webkit-box-align: start;
@@ -805,7 +771,7 @@ h2 {
     font-size: 30px;
   }
   .menu__entrees {
-    width: 85%;
+    width: 80%;
     padding-left: 30px;
   }
   .menu__cartes .btn-food {
@@ -813,7 +779,7 @@ h2 {
   }
   .menu__cartes .btn-food:hover .price {
     width: 20px;
-    left: -35%;
+    left: -30%;
   }
   .menu__cartes .btn-food:hover h4, .menu__cartes .btn-food:hover p {
     text-overflow: ellipsis;
@@ -825,7 +791,7 @@ h2 {
 
 @media all and (max-width: 350px) {
   h4, p {
-    font-size: 16px !important;
+    font-size: 15px !important;
   }
   .price {
     font-size: 15px;
@@ -855,7 +821,7 @@ h2 {
   }
   .menu__cartes .btn-food:hover .price {
     width: 20px;
-    left: -45%;
+    left: -40%;
   }
   .menu__cartes .btn-food:hover h4, .menu__cartes .btn-food:hover p {
     text-overflow: ellipsis;
