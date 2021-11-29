@@ -21,15 +21,15 @@
     height: 100%;
     background-color: rgba(71, 71, 71, 0.322);
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: fade_out 2.5s ease forwards;
 }
 
 
 
 .loader {
-    position: fixed;
-    top: 35%;
-    left: 46%;
     border-top: 16px solid #9356DC;
     border-right: 16px solid #FF79DA;
     border-bottom: 16px solid #99E2D0;

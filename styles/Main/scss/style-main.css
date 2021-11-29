@@ -206,14 +206,20 @@
   height: 100%;
   background-color: rgba(71, 71, 71, 0.322);
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-animation: fade_out 2.5s ease forwards;
           animation: fade_out 2.5s ease forwards;
 }
 
 .loader {
-  position: fixed;
-  top: 35%;
-  left: 46%;
   border-top: 16px solid #9356DC;
   border-right: 16px solid #FF79DA;
   border-bottom: 16px solid #99E2D0;
