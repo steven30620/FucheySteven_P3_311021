@@ -286,14 +286,19 @@ a:visited {
 }
 
 .local__texte {
+  text-align: center;
+  width: 200px;
+}
+
+.local h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 200px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 200px;
   font-size: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -504,7 +509,7 @@ ol {
 
 .restaurants {
   background: #f6f6f6;
-  height: 800px;
+  height: 850px;
   width: 100%;
 }
 
@@ -558,7 +563,14 @@ ol {
           flex-direction: column;
 }
 
+.carte__container {
+  width: 650px;
+  padding-right: 20px;
+}
+
 .carte__img {
+  padding: 0px;
+  margin: 0px;
   -o-object-fit: cover;
      object-fit: cover;
   height: 70%;
@@ -571,7 +583,7 @@ ol {
   content: "Nouveau";
   position: relative;
   top: -250%;
-  left: 85%;
+  left: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -625,6 +637,12 @@ ol {
   font-size: 22px;
   padding-left: 10px;
   padding-bottom: 10px;
+}
+
+.carte__btn {
+  position: relative;
+  top: -95px;
+  left: 92%;
 }
 
 .footer .container {
@@ -789,29 +807,32 @@ ol {
   }
   .restaurants {
     background: #f6f6f6;
-    height: 1700px;
+    height: 1850px;
+    margin: 0;
+    padding: 0;
     width: 100%;
   }
   .restaurants .container {
-    margin: 0;
+    padding-left: 0px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
   .restaurants__titre {
-    padding: 20px;
+    width: 20px;
   }
   .cartes {
-    width: 95%;
+    width: 100%;
     margin: 0px;
+    padding: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -825,15 +846,17 @@ ol {
         flex-wrap: wrap;
   }
   .carte {
-    width: 80%;
+    width: 95%;
     height: 400px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  }
+  .carte__container {
+    width: 80%;
+    padding: 0px;
+    margin: 0px;
+  }
+  .carte__btn {
+    left: 88%;
+    top: -110px;
   }
   .carte__footer::before {
     content: "Nouveau";
@@ -1001,29 +1024,9 @@ ol {
     font-weight: bold;
   }
   .restaurants {
-    background: #f6f6f6;
-    height: 1400px;
-    width: 100%;
-  }
-  .restaurants .container {
-    margin: 0;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .restaurants__titre {
-    padding: 20px;
+    height: 1500px;
   }
   .cartes {
-    width: 95%;
     margin: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1038,7 +1041,7 @@ ol {
         flex-wrap: wrap;
   }
   .carte {
-    width: 80%;
+    width: 100%;
     height: 300px;
     margin-bottom: 30px;
     display: -webkit-box;
@@ -1052,8 +1055,8 @@ ol {
   .carte__footer::before {
     content: "Nouveau";
     position: relative;
-    top: -200%;
-    left: 80%;
+    top: -220%;
+    left: 78%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1068,38 +1071,9 @@ ol {
     color: #328570;
     font-size: 20px;
   }
-  .carte__footer, .carte__footerBIS {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background: white;
-    border: 0px solid transparent;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    -webkit-box-shadow: 1px 2px 8px 5px rgba(216, 216, 216, 0.56);
-            box-shadow: 1px 2px 8px 5px rgba(216, 216, 216, 0.56);
-    height: 85px;
-  }
-  .carte__contenu, .carte__contenu1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .carte__contenu1 {
-    margin-left: -80px;
-  }
-  .carte__titre {
-    padding-top: 10px;
-    padding-left: 10px;
-    width: 80%;
-  }
-  .carte__sous-titre {
-    padding-left: 10px;
-    padding-bottom: 10px;
+  .carte__btn {
+    left: 90%;
+    top: -90px;
   }
 }
 
@@ -1169,7 +1143,7 @@ ol {
   }
   .restaurants {
     background: #f6f6f6;
-    height: 1400px;
+    height: 1480px;
     width: 100%;
   }
   .restaurants .container {
@@ -1178,9 +1152,6 @@ ol {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1190,7 +1161,6 @@ ol {
     font-size: 25px;
   }
   .cartes {
-    width: 95%;
     margin: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1205,7 +1175,7 @@ ol {
         flex-wrap: wrap;
   }
   .carte {
-    width: 90%;
+    width: 100%;
     height: 300px;
     margin-bottom: 30px;
     display: -webkit-box;
@@ -1220,7 +1190,7 @@ ol {
     content: "Nouveau";
     position: relative;
     top: -220%;
-    left: 80%;
+    left: 70%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1276,9 +1246,35 @@ ol {
 
 @media all and (max-width: 470px) {
   .carte {
-    width: 90%;
     height: 300px;
     margin-bottom: 30px;
+  }
+  .carte__footer::before {
+    content: "Nouveau";
+    position: relative;
+    top: -220%;
+    left: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #99E2D0;
+    width: 85px;
+    height: 21px;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: #328570;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Roboto','verdana';
+  }
+}
+
+@media all and (max-width: 370px) {
+  .reservez {
+    background: #f5f4f4;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1286,12 +1282,44 @@ ol {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .reservez__titre {
+    padding-top: 30px;
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .reservez__titre__2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 16px;
+    font-weight: lighter;
+    color: gray;
+    padding-top: 5px;
+  }
+  .carte {
+    height: 300px;
+    margin-bottom: 30px;
+  }
+  .carte__btn {
+    left: 85%;
   }
   .carte__footer::before {
     content: "Nouveau";
     position: relative;
     top: -220%;
-    left: 70%;
+    left: 55%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
