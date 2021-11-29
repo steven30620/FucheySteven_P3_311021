@@ -370,6 +370,10 @@ h2 {
      object-fit: cover;
 }
 
+.central {
+  height: 570px;
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -462,7 +466,7 @@ h2 {
   position: relative;
   left: -24px;
   top: 12px;
-  font-size: 1.8rem;
+  font-size: 25px;
   color: #fff;
   -webkit-animation: rotation 0.5s ease-in;
           animation: rotation 0.5s ease-in;
@@ -510,18 +514,6 @@ h2 {
   width: 30%;
 }
 
-.menu__plats {
-  width: 30%;
-}
-
-.menu__desserts {
-  width: 30%;
-}
-
-.central {
-  height: 570px;
-}
-
 .footer-menu {
   padding-top: 70px;
   display: -webkit-box;
@@ -558,7 +550,7 @@ h2 {
 }
 
 .footer .container {
-  height: 200px;
+  height: 250px;
   background: #353535;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -572,7 +564,7 @@ h2 {
 .footer__logo {
   color: white;
   font-family: 'Shrikhand','verdana';
-  font-size: 20px;
+  font-size: 30px;
   margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -597,8 +589,272 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  font-size: 20px;
   margin-left: 20px;
   margin-top: 5px;
   width: 300px;
+}
+
+@media all and (max-width: 1650px) {
+  .central {
+    height: 1420px;
+  }
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    margin-top: -80px;
+  }
+  .menu .container {
+    background-color: #f6f6f6;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 1500px;
+  }
+  .menu__restaurant-nom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    font-family: 'Shrikhand','verdana';
+    font-size: 35px;
+    padding-top: 20px;
+    padding-left: 5%;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  .menu__btn {
+    position: relative;
+    top: -18px;
+    left: 20px;
+  }
+  .menu__titre {
+    text-transform: uppercase;
+    font-family: 'Roboto','verdana';
+    width: 10%;
+    padding-bottom: 7px;
+    border-bottom: 3px solid #99E2D0;
+  }
+  .menu__cartes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .menu__cartes .btn-food {
+    background-size: 200%;
+    background-position: left;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .menu__cartes .btn-food:hover {
+    cursor: pointer;
+    background-position: -100px;
+  }
+  .menu__cartes .btn-food:hover .check-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 0;
+    left: -55px;
+    margin: 0;
+    font-size: 25px;
+    color: white;
+    -webkit-animation: rotation 0.5s ease-in;
+            animation: rotation 0.5s ease-in;
+  }
+  .menu__cartes .btn-food:hover .price {
+    -webkit-animation: slide-right 0.4s ease-in;
+            animation: slide-right 0.4s ease-in;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 20px;
+  }
+  .menu__cartes .btn-food:hover h4, .menu__cartes .btn-food:hover p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 380px;
+  }
+  .menu__entrees {
+    width: 92%;
+    padding-left: 30px;
+  }
+  .footer-menu button {
+    position: absolute;
+    top: 95%;
+  }
+}
+
+@media all and (max-width: 770px) {
+  .central {
+    height: 1420px;
+  }
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: absolute;
+    margin-top: -80px;
+    left: 0;
+    width: 100%;
+  }
+  .menu__restaurant-nom {
+    width: 70%;
+    padding: 10px 0 0 20px;
+  }
+  .menu__entrees {
+    width: 85%;
+    padding-left: 30px;
+  }
+  .menu .container {
+    background-color: #f6f6f6;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 1500px;
+  }
+  .menu__titre {
+    text-transform: uppercase;
+    font-family: 'Roboto','verdana';
+    width: 10%;
+    padding-bottom: 7px;
+    border-bottom: 3px solid #99E2D0;
+  }
+  .menu__cartes .btn-food {
+    background-size: 201%;
+  }
+  .menu__cartes .btn-food:hover .price {
+    width: 20px;
+    left: -25%;
+  }
+  .menu__cartes .btn-food:hover h4, .menu__cartes .btn-food:hover p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 300px;
+  }
+}
+
+@media all and (max-width: 450px) {
+  h4, p {
+    font-size: 17px !important;
+  }
+  .price {
+    font-size: 15px;
+  }
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: absolute;
+    margin-top: -80px;
+    left: 0;
+    width: 100%;
+  }
+  .menu__restaurant-nom {
+    font-size: 30px;
+  }
+  .menu__entrees {
+    width: 85%;
+    padding-left: 30px;
+  }
+  .menu__cartes .btn-food {
+    background-size: 201%;
+  }
+  .menu__cartes .btn-food:hover .price {
+    width: 20px;
+    left: -35%;
+  }
+  .menu__cartes .btn-food:hover h4, .menu__cartes .btn-food:hover p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 150px;
+  }
+}
+
+@media all and (max-width: 350px) {
+  h4, p {
+    font-size: 16px !important;
+  }
+  .price {
+    font-size: 15px;
+  }
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: absolute;
+    margin-top: -80px;
+    left: 0;
+    width: 100%;
+  }
+  .menu__restaurant-nom {
+    font-size: 30px;
+  }
+  .menu__entrees {
+    width: 80%;
+    padding-left: 30px;
+  }
+  .menu__cartes .btn-food {
+    background-size: 201%;
+  }
+  .menu__cartes .btn-food:hover .price {
+    width: 20px;
+    left: -45%;
+  }
+  .menu__cartes .btn-food:hover h4, .menu__cartes .btn-food:hover p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100px;
+  }
 }
 /*# sourceMappingURL=style-alafrancaise.css.map */
