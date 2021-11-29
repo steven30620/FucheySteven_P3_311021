@@ -15,7 +15,9 @@
 @import '../../../src/placeholders';
 
 // loader
-
+a{
+    color: black;
+}
 .box-loader{
     z-index: 9999;
     width: 100%;
