@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://kit.fontawesome.com/7d17636476.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="./styles/a_la_francaise/style-alafrancaise.css">  
+<link rel="stylesheet" href="./styles/main/scss/a_la_francaise/style-alafrancaise.css">  
 <link rel="icon" href="./img/favicon.ico" />
-<title>À la française</title>
+<title>La palette du goût</title>
 <meta name="title" content=" A la française">
 
 
@@ -14,107 +14,197 @@
 
 <header class="header">
     <a class="header__btn" href="./index.html"><i class="fas fa-arrow-left fa-2x"></i> </a>
-    <h1 class="header__logo">ohmyfood</h1>
-    
+    <h1 class="header__logo">ohmyfood</h1>  
 </header>
+
+<div class="box-loader">
+    <div class="loader"></div>
+</div>
 
 <body>
 
     <div class="illustration">
-      <img class="illustration__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant_la_palette_du_gout">  
+    <img class="illustration__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant_la_palete_du_gout">  
     </div>
 
 <div class="central">
     <section class="menu">
         <div class="container">
 
-            <h2 class="menu__restaurant-nom">À la française</h2>  
-        <div class="menu__cartes">   
-            <div class="menu__entrees">
-                <h2 class="menu__titre">entrées</h2>
-                    <div class="menu__carte">
-                        <div class="menu__carte_gauche">
-                            <div class="menu__carte__titre">Tartare de poulpe acidulé</div>
-                            <div class="menu__carte__sous-titre">Aux zestes d'orange</div>
+            <h2 class="menu__restaurant-nom">La palette du goût
+                <div class="menu__btn">
+                    <svg class="icon-like" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" witdh="24" height="24" stroke="black" stroke-witdh="5">
+                        <path fill="" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                        <defs>
+                            <linearGradient id="icon-fill">
+                                <stop offset="0%" stop-color="#FF79DA" />
+                                <stop offset="100%" stop-color="#9356DC" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </h2> 
+                
+        
+            <div class="menu__cartes">  
+                
+                <div class="menu__entrees">
+                    <h2 class="menu__titre">entrées</h2>
+                    <div class="btn-food menu-1">
+                    
+                        <div class="description-container">
+        
+                            <div class="description-text">
+                                <h4>Fricassée d'escargot</h4>
+                                <p>Au piment d'Espelette </p>
+                            </div>
+        
+                            <div class="price">25€</div>
+        
+                            <div class="check-icon"><i class="fas fa-check-circle"></i></div>
                         </div>
-                        <div class="menu__carte__prix">25€</div>
+                        
                     </div>
-
-                    <div class="menu__carte">
-                        <div class="menu__carte_gauche">
-                            <div class="menu__carte__titre">Velouté de légumes d'antan</div>
-                            <div class="menu__carte__sous-titre">Carotte, panais, topinambour</div>
+        
+                    <div class="btn-food menu-2">
+                        
+                        <div class="description-container">
+        
+                            <div class="description-text">
+                                <h4>Foie gras de canard mi-cuit</h4>
+                                <p>Et ses copeaux de truffe noire</p>
+                            </div>
+        
+                            <div class="price">35€</div>
+        
+                            <div class="check-icon"><i class="fas fa-check-circle"></i></div>
                         </div>
-                        <div class="menu__carte__prix">35€</div>
+                        
                     </div>
-
-                    <div class="menu__carte">
-                        <div class="menu__carte_gauche">
-                            <div class="menu__carte__titre">Soupe à l'oignon</div>
-                            <div class="menu__carte__sous-titre">Revisitée</div>
+        
+                    <div class="btn-food menu-3">
+                        
+                        <div class="description-container">
+        
+                            <div class="description-text">
+                                <h4>Oeuf au plat</h4>
+                                <p>Assaisonné à la truffe sur lit de caviar</p>
+                            </div>
+        
+                            <div class="price">20€</div>
+        
+                            <div class="check-icon"><i class="fas fa-check-circle"></i></div>
                         </div>
-                        <div class="menu__carte__prix">20€</div>
+                        
                     </div>
-            </div>
+                </div>
 
                 
 
-            <div class="menu__plats">
-                <h2 class="menu__titre">PLATS</h2>
-                    <div class="menu__carte">
-                        <div class="menu__carte_gauche">
-                            <div class="menu__carte__titre"> Coquilles Saint-Jacques</div>
-                            <div class="menu__carte__sous-titre">Accompagnées d'une purée de panais</div>
+                <div class="menu__entrees">
+                    <h2 class="menu__titre">PLATS</h2>
+                    <div class="btn-food menu-1">
+                    
+                        <div class="description-container">
+        
+                            <div class="description-text">
+                                <h4>Filet de boeuf aux herbes</h4>
+                                <p>Accompagné de sa ribambelle de légumes</p>
+                            </div>
+        
+                            <div class="price">40€</div>
+        
+                            <div class="check-icon"><i class="fas fa-check-circle"></i></div>
                         </div>
-                        <div class="menu__carte__prix">40€</div>
+                        
                     </div>
-
-                    <div class="menu__carte">
-                        <div class="menu__carte_gauche">
-                            <div class="menu__carte__titre">Magret de canard</div>
-                            <div class="menu__carte__sous-titre">Et parmentier de pommes de terre</div>
+        
+                    <div class="btn-food menu-2">
+                        
+                        <div class="description-container">
+        
+                            <div class="description-text">
+                                <h4>Parmentier de queue de boeuf</h4>
+                                <p>À la truffe noire sur sa purée de panais</p>
+                            </div>
+        
+                            <div class="price">35€</div>
+        
+                            <div class="check-icon"><i class="fas fa-check-circle"></i></div>
                         </div>
-                        <div class="menu__carte__prix">35€</div>
+                        
                     </div>
-
-                    <div class="menu__carte">
-                        <div class="menu__carte_gauche">
-                            <div class="menu__carte__titre">Pigeonneau d’Ille-et-Vilaine</div>
-                            <div class="menu__carte__sous-titre">Sur son lit de gnocchis aux légumes</div>
+        
+                    <div class="btn-food menu-3">
+                        
+                        <div class="description-container">
+        
+                            <div class="description-text">
+                                <h4>Filet de turbot</h4>
+                                <p>Aux agrumes</p>
+                            </div>
+        
+                            <div class="price">44€</div>
+        
+                            <div class="check-icon"><i class="fas fa-check-circle"></i></div>
                         </div>
-                        <div class="menu__carte__prix">44€</div>
+                        
                     </div>
+                </div>
 
-            </div>    
-
-            <div class="menu__desserts">
-
-                <h2 class="menu__titre">DESSERTS</h2>
-                    <div class="menu__carte">
-                        <div class="menu__carte_gauche">
-                            <div class="menu__carte__titre">Pétales de violettes glacés</div>
-                            <div class="menu__carte__sous-titre">Et purée de noisettes</div>
+                <div class="menu__entrees">
+                    <h2 class="menu__titre">Desserts</h2>
+                    <div class="btn-food menu-1">
+                    
+                        <div class="description-container">
+        
+                            <div class="description-text">
+                                <h4>Paris-Brest</h4>
+                                <p>Revisité</p>
+                            </div>
+        
+                            <div class="price">18€</div>
+        
+                            <div class="check-icon"><i class="fas fa-check-circle"></i></div>
                         </div>
-                        <div class="menu__carte__prix">18€</div>
+                        
                     </div>
-
-                    <div class="menu__carte">
-                        <div class="menu__carte_gauche">
-                            <div class="menu__carte__titre">Fondant au chocolat</div>
-                            <div class="menu__carte__sous-titre">Revisité</div>
+        
+                    <div class="btn-food menu-2">
+                        
+                        <div class="description-container">
+        
+                            <div class="description-text">
+                                <h4>Macaron au chocolat d'exception </h4>
+                                <p>Et glace à la vanille de Madagascar</p>
+                            </div>
+        
+                            <div class="price">22€</div>
+        
+                            <div class="check-icon"><i class="fas fa-check-circle"></i></div>
                         </div>
-                        <div class="menu__carte__prix">22€</div>
+                        
                     </div>
-
-                    <div class="menu__carte">
-                        <div class="menu__carte_gauche">
-                            <div class="menu__carte__titre">Millefeuille croustillant</div>
-                            <div class="menu__carte__sous-titre">Myrtilles et pâte d’amande</div>
+        
+                    <div class="btn-food menu-3">
+                        
+                        <div class="description-container">
+        
+                            <div class="description-text">
+                                <h4>Mousse au chocolat </h4>
+                                <p>Au piment d'Espelette et à la truffe noire</p>
+                            </div>
+        
+                            <div class="price">23€</div>
+        
+                            <div class="check-icon"><i class="fas fa-check-circle"></i></div>
                         </div>
-                        <div class="menu__carte__prix">23€  </div>
+                        
                     </div>
+                </div>
 
-            </div>
+
+
         </div>
             <div class="footer-menu">
                 <button class="footer__menu__btn"> Commander</button>

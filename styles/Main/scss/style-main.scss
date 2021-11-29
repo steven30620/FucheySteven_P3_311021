@@ -2,8 +2,7 @@
   /*Téléchargement de la police Shrikhand et Roboto */
     {
     font-family: 'Shrikhand';
-    src: url('../../../fonts/Shrikland/shrikhand-regular.woff'), url('../../../fonts/Shrikland/shrikhand-regular.woff2');
-     
+    src: url('../../../fonts/Shrikland/shrikhand-regular.woff'),  url('../../../fonts/Shrikland/shrikhand-regular.woff2');
 }
 
 @font-face{
@@ -12,44 +11,39 @@
 }
 
 // Import des resssource sass
-@import '../../src/variables';
 @import '../../src/keyframes';
 @import '../../src/placeholders';
 // loader
 
-// .box-loader{
-//     z-index: 9999;
-//     width: 100%;
-//     height: 100%;
-//     background-color: rgba(112, 112, 112, 0.322);
-//     position: fixed;
-    
-// }
+.box-loader{
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(71, 71, 71, 0.322);
+    position: fixed;
+    animation: fade_out 2.5s ease forwards;
+}
 
 
 
-// .loader {
-//     position: fixed;
-//     top: 35%;
-//     left: 46%;
-//     border-top: 16px solid #9356DC;
-//     border-right: 16px solid #FF79DA;
-//     border-bottom: 16px solid #99E2D0;
-//     border-left: 16px solid #f6f6f6;
-//     background-color:  rgb(161, 161, 161) ;
-//     border-radius: 60px ;
-//     width: 120px;
-//     height: 120px;
-//     animation: spin 1.5s linear infinite;
+.loader {
+    position: fixed;
+    top: 35%;
+    left: 46%;
+    border-top: 16px solid #9356DC;
+    border-right: 16px solid #FF79DA;
+    border-bottom: 16px solid #99E2D0;
+    border-left: 16px solid #f6f6f6;
+    background-color:  rgb(161, 161, 161) ;
+    border-radius: 60px ;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.5s linear infinite;
     
     
-// }
+}
 
-// @keyframes spin {
-//     0% { transform: rotate(0deg); }
-//     100% { transform: rotate(360deg); }
-    
-// }
+
 
 
 
@@ -341,6 +335,7 @@ ol{
                 
             }
             a{
+                text-decoration: none;
                 color: white;
             }
             &__icon{

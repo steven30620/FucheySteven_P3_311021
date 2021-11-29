@@ -2,40 +2,47 @@
   /*Téléchargement de la police Shrikhand et Roboto */
     {
     font-family: 'Shrikhand';
-    src: url('../../../fonts/Shrikland/shrikhand-regular.woff'), url('../../../fonts/Shrikland/shrikhand-regular.woff2');
-     
+    src: url('../../../../fonts/Shrikland/shrikhand-regular.woff'),  url('../../../../fonts/Shrikland/shrikhand-regular.woff2');
 }
 
 @font-face{
     font-family: 'Roboto';
-    src: url('../../../fonts/Roboto/roboto-regular-webfont.woff'),url('../../../fonts/Roboto/roboto-regular-webfont.woff2');
+    src: url('../../../../fonts/Roboto/roboto-regular-webfont.woff'),url('../../../../fonts/Roboto/roboto-regular-webfont.woff2');
 }
 
 // Import des ressource sass
-@import '../src/variables';
-@import '../src/keyframes';
-@import '../src/placeholders';
-// decoration de la checkbox
-.menu-check{
-    width: 15px;
-    margin-left: 40px;
+@import '../../../src/keyframes';
+@import '../../../src/placeholders';
+
+// loader
+
+.box-loader{
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(71, 71, 71, 0.322);
+    position: fixed;
+    animation: fade_out 4s ease forwards;
 }
 
-.menu-fav input[type="checkbox"], //pour enlever la box de base 
-.menu-fav .checked { // pour enlever la position "selectione"
-display: none;
-}
 
-.menu-fav input[type="checkbox"]:checked ~ .checked //:checked permet de cibler uniquement les checkbox sui sont coches
-{
-display: inline-block;
-}
 
-.menu-fav input[type="checkbox"]:checked ~ .unchecked // fait disparaitre le deuxieme icone quand on decoche la case
-{
-display: none;
+.loader {
+    position: fixed;
+    top: 35%;
+    left: 46%;
+    border-top: 16px solid #9356DC;
+    border-right: 16px solid #FF79DA;
+    border-bottom: 16px solid #99E2D0;
+    border-left: 16px solid #f6f6f6;
+    background-color:  rgb(161, 161, 161) ;
+    border-radius: 60px ;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.5s linear infinite;
+    
+    
 }
-
 
 
 /* Header */ 
@@ -158,6 +165,7 @@ h2{
                     left: -24px;
                     top: 12px;
                     font-size:25px;
+                    width: 25px;
                     color: #fff;
                     animation: rotation 0.5s ease-in;
                 }
@@ -166,7 +174,7 @@ h2{
                     animation: slide-right 0.4s ease-in;
                     align-items: flex-start;
                     position: relative;
-                    left: -20%;
+                    left: -25%;
                     width: 10px;
                 }
     
@@ -174,7 +182,7 @@ h2{
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
-                    width: 400px;
+                    width: 250px;
                 }
             }
         }
@@ -412,7 +420,7 @@ h2{
                         text-overflow: ellipsis;
                         white-space: nowrap;
                         overflow: hidden;
-                        width: 300px;
+                        width: 200px;
                     }
                 }
             }
