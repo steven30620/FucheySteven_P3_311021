@@ -1,0 +1,835 @@
+@font-face
+  /*Téléchargement de la police Shrikhand et Roboto */
+    {
+    font-family: 'Shrikhand';
+    src: url('../../../../fonts/Shrikland/shrikhand-regular.woff'),  url('../../../../fonts/Shrikland/shrikhand-regular.woff2');
+}
+
+@font-face{
+    font-family: 'Roboto';
+    src: url('../../../../fonts/Roboto/roboto-regular-webfont.woff'),url('../../../../fonts/Roboto/roboto-regular-webfont.woff2');
+}
+
+// Import des resssource sass
+@import '../../src/keyframes';
+@import '../../src/placeholders';
+// loader
+
+.box-loader{
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(71, 71, 71, 0.322);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade_out 2.5s ease forwards;
+}
+
+
+
+.loader {
+    border-top: 16px solid #9356DC;
+    border-right: 16px solid #FF79DA;
+    border-bottom: 16px solid #99E2D0;
+    border-left: 16px solid #f6f6f6;
+    background-color:  rgb(161, 161, 161) ;
+    border-radius: 60px ;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.5s linear infinite;
+    
+    
+}
+
+
+
+
+
+/* Header */ 
+
+*{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family:'Roboto',verdana;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+
+.header{
+    display: flex;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+        &__logo{
+            font-family: 'Shrikhand', verdana;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+        }
+}
+
+.local{
+    background: linear-gradient(#d3d3d3 0,01px , rgb(236, 235, 235) 5%);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        &__texte{
+            display: flex;
+            flex-direction: row;            
+            width: 200px;
+            font-size: 20px;
+            justify-content: center;
+            color: rgb(94, 92, 92);
+        }
+        i{
+            width: 20px;
+            padding-top:3px;
+        }
+}
+
+.reservez{
+    background: rgb(245, 244, 244);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+        &__titre{
+            padding-top: 30px;
+            display: flex;
+            justify-content: center;
+                &__2{
+                    display: flex;
+                    justify-content: center;                    
+                    font-size: 18px;
+                    font-weight: lighter;
+                    color: gray;     
+                    padding-top: 5px;                
+                    }
+        }
+}
+
+.btn-reservez{
+    padding-top: 20px;
+    display: flex; 
+    justify-content: center;   
+        button{
+            display: flex;
+            justify-content: center;
+            width: 280px;
+            font-size: 20px;
+            margin-bottom: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: 0px solid transparent;
+            border-radius: 100px;
+            color: white;
+            background: rgb(255,140,245);
+            background: linear-gradient(175deg, rgba(255,140,245,1) 30%, rgba(99,44,142,1) 99%);
+            &:hover{
+                background: linear-gradient(175deg, rgb(252, 149, 243) 30%, rgb(121, 59, 168) 99%);
+                cursor: pointer;
+            }
+    }
+}
+
+ol{
+    list-style: none;
+}
+
+.tuto{
+    display: flex;
+    justify-content: center;
+        &__container{
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        &__titre{
+                padding: 10px 0px 20px 10px;
+                width: 200px;
+                font-weight: bold;
+            }
+        
+        &__etapes{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 25px;
+            }
+        &__etape{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin:8px 10px 8px 20px;
+            width: 30%;
+            height: 60px;
+            border: 1px solid transparent;
+            border-radius: 20px;
+            background: #f6f6f6;
+            box-shadow:1px 2px 8px 1px rgba(216,216,216,0.56);
+                &1::before{
+                    content: "1";
+                    display: flex;                    
+                    justify-content: center;
+                    width: 22px;
+                    background: #9356DC;
+                    border-radius: 100px;
+                    position: absolute;
+                    left: 10.6%;                    
+                }
+                &2::before{
+                    content: "2";
+                    display: flex;                    
+                    justify-content: center;
+                    width: 22px;
+                    background: #9356DC;
+                    border-radius: 100px;
+                    position: absolute;
+                    left: 37.5%;
+                }
+                &3::before{
+                    content: "3";
+                    display: flex;                    
+                    justify-content: center;
+                    width: 22px;
+                    background: #9356DC;
+                    border-radius: 100px;
+                    position: absolute;
+                    left: 64.7%;
+                }
+            }
+            &__icon{
+                width: 20px;
+                margin-right: 10px;
+                margin-left: 20px;
+                color: #949494;
+                }
+            &__text {
+                width: 80%;
+                font-size: 20px;
+                font-weight: bold;
+            }     
+        
+    }
+
+.restaurants{
+    background: #f6f6f6;
+    height: 800px;
+    width: 100%;
+    .container{
+        margin: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__titre{
+        padding:20px 80% 20px 5%;
+        width: 200px;
+        font-size: 30px;
+        font-weight: bold;
+        
+    }
+
+}
+
+.cartes{
+    width:95%;
+    margin:0px;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;    
+    
+}
+
+.carte{
+    width: 650px;
+    height: 350px;  
+    display: flex;
+    flex-direction: column;  
+        &__img{
+            object-fit: cover;
+            height: 70%;
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px ;
+        }
+        &__footer::before{
+            content: "Nouveau";    
+            position: relative;
+            top: -250%;
+            left: 85%;    
+            display: flex;
+            justify-content: center;
+            background: #99E2D0;
+            width: 85px;
+            height: 30px;
+            padding-left: 2px;
+            padding-right: 2px;
+            color: #328570;
+            font-size: 20px;    
+        }
+        &__footer,&__footerBIS{
+            display: flex;
+            background: white;
+            border: 0px solid transparent;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow:1px 2px 8px 5px rgba(216,216,216,0.56);
+            height: 85px;
+        }
+        &__contenu,&__contenu1{
+            display: flex;
+            flex-direction: column;
+        }
+        &__contenu1{
+            margin-left:-80px ;
+        }
+        &__titre{
+            font-size: 25px;
+            padding-top: 10px ;
+            padding-left: 10px;
+            width: 80%;
+        }
+        &__sous-titre{
+            font-size: 22px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+        &__btn{
+            @extend %btn-fav;
+            }
+        }
+
+    .footer{
+        .container{
+            height: 250px;
+            background: #353535;
+            display: flex;
+            flex-direction: column;
+            
+        }
+            &__logo{
+                color: white;
+                font-family:'Shrikhand','verdana' ;
+                font-size: 30px;
+                margin-left: 20px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                width: 150px;
+                
+            }
+            a{
+                text-decoration: none;
+                color: white;
+            }
+            &__icon{
+                width: 20px;
+                margin-right: 8px;
+                margin-left: 5px;
+            }
+            &__list-contenu{
+                display: flex;
+                flex-direction: row;
+                font-size: 20px;
+                margin-left: 20px;
+                margin-top: 5px;
+                width: 300px;
+            }
+            
+    }
+
+
+
+// responsive tablette
+
+    @media all and (max-width:1450px){
+        
+        .tuto{
+            &__titre{
+                font-size: 30px;
+            }
+            display: flex;
+            justify-content: center;
+                &__container{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 450px;
+                    margin-left: 10%;
+                    margin-right: 10%;
+                }                
+                &__etapes{
+                    display: flex;
+                    flex-direction:column;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 25px;
+                    }
+                &__etape{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin: -5px 10px 20px 20px;
+                    width: 70%;
+                    height: 80px;
+                    border: 1px solid transparent;
+                    border-radius: 20px;
+                    background: #f6f6f6;
+                    box-shadow:1px 2px 8px 1px rgba(216,216,216,0.56);
+                        &1::before{
+                            content: "1";
+                            display: flex;                    
+                            align-items: center;
+                            width: 30px;
+                            height: 30px;
+                            background: #9356DC;
+                            border-radius: 100px;
+                            position: relative;
+                            left: -14px;                    
+                        }
+                        &2::before{
+                            content: "2";
+                            display: flex;                    
+                            align-items: center;
+                            width: 30px;
+                            height: 30px;
+                            background: #9356DC;
+                            border-radius: 100px;
+                            position: relative;
+                            left: -14px; 
+                        }
+                        &3::before{
+                            content: "3";
+                            display: flex;                    
+                            align-items: center;
+                            width: 30px;
+                            height: 30px;
+                            background: #9356DC;
+                            border-radius: 100px;
+                            position: relative;
+                            left: -14px; 
+                        }
+                    }
+                    
+                    &__text {
+                        width: 80%;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }     
+                
+            }
+        
+        .restaurants{
+            background: #f6f6f6;
+            height: 1700px;
+            width: 100%;
+            .container{
+                margin: 0;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            &__titre{
+                padding: 20px;
+            }
+        
+        }
+        
+        .cartes{
+            width:95%;
+            margin:0px;
+            display: flex;
+            align-items:center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;    
+            
+        }
+        
+        .carte{
+            width: 80%;
+            height: 400px;  
+            display: flex;
+            flex-direction: column;  
+                &__footer::before{
+                    content: "Nouveau";    
+                    position: relative;
+                    top: -300%;
+                    left: 85%;    
+                    display: flex;
+                    justify-content: center;
+                    background: #99E2D0;
+                    width: 85px;
+                    height: 30px;
+                    padding-left: 2px;
+                    padding-right: 2px;
+                    color: #328570;
+                    font-size: 20px;    
+                }
+                &__footer,&__footerBIS{
+                    display: flex;
+                    background: white;
+                    border: 0px solid transparent;
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    box-shadow:1px 2px 8px 5px rgba(216,216,216,0.56);
+                    height: 85px;
+                }
+                &__contenu,&__contenu1{
+                    display: flex;
+                    flex-direction: column;
+                }
+                &__contenu1{
+                    margin-left:-80px ;
+                }
+                &__titre{
+                    padding-top: 10px ;
+                    padding-left: 10px;
+                    width: 80%;
+                }
+                &__sous-titre{
+                    padding-left: 10px;
+                    padding-bottom: 10px;
+                }
+            }        
+        }
+
+
+// Responsive téléphone
+
+
+@media all and(max-width:800px){
+    
+    .tuto{
+        &__titre{
+            font-size: 25px;
+        }
+        display: flex;
+        justify-content: center;
+            &__container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 450px;
+            }                
+            &__etapes{
+                display: flex;
+                flex-direction:column;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 15px;
+                }
+            &__etape{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-top: 10px;
+                width: 70%;
+                height: 80px;
+                border: 1px solid transparent;
+                border-radius: 20px;
+                background: #f6f6f6;
+                box-shadow:1px 2px 8px 1px rgba(216,216,216,0.56);
+                    &1::before{
+                        content: "1";
+                        display: flex;                    
+                        align-items: center;
+                        width: 30px;
+                        height: 30px;
+                        background: #9356DC;
+                        border-radius: 100px;
+                        position: relative;
+                        left: -14px;                    
+                    }
+                    &2::before{
+                        content: "2";
+                        display: flex;                    
+                        align-items: center;
+                        width: 30px;
+                        height: 30px;
+                        background: #9356DC;
+                        border-radius: 100px;
+                        position: relative;
+                        left: -14px; 
+                    }
+                    &3::before{
+                        content: "3";
+                        display: flex;                    
+                        align-items: center;
+                        width: 30px;
+                        height: 30px;
+                        background: #9356DC;
+                        border-radius: 100px;
+                        position: relative;
+                        left: -14px; 
+                    }
+                }
+                
+                &__text {
+                    width: 80%;
+                    font-size: 20px;
+                    font-weight: bold;
+                }     
+            
+        }
+    
+    .restaurants{
+        background: #f6f6f6;
+        height: 1400px;
+        width: 100%;
+        .container{
+            margin: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        &__titre{
+            padding: 20px;
+        }
+    
+    }
+    
+    .cartes{
+        width:95%;
+        margin:0px;
+        display: flex;
+        align-items:center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;    
+        
+    }
+    
+    .carte{
+        width: 80%;
+        height: 300px;
+        margin-bottom: 30px;  
+        display: flex;
+        flex-direction: column;  
+            &__footer::before{
+                content: "Nouveau";    
+                position: relative;
+                top: -200%;
+                left: 80%;    
+                display: flex;
+                justify-content: center;
+                background: #99E2D0;
+                width: 85px;
+                height: 30px;
+                padding-left: 2px;
+                padding-right: 2px;
+                color: #328570;
+                font-size: 20px;    
+            }
+            &__footer,&__footerBIS{
+                display: flex;
+                background: white;
+                border: 0px solid transparent;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                box-shadow:1px 2px 8px 5px rgba(216,216,216,0.56);
+                height: 85px;
+            }
+            &__contenu,&__contenu1{
+                display: flex;
+                flex-direction: column;
+            }
+            &__contenu1{
+                margin-left:-80px ;
+            }
+            &__titre{
+                padding-top: 10px ;
+                padding-left: 10px;
+                width: 80%;
+            }
+            &__sous-titre{
+                padding-left: 10px;
+                padding-bottom: 10px;
+            }
+        }        
+    }
+
+
+
+@media all and(max-width:555px){
+    
+    .reservez{
+        align-items: center;
+            &__titre{
+                padding-top: 30px;
+                font-size: 22px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                    &__2{
+                        text-align: center;
+                        justify-content: center;
+                        width: 70%;
+                        display: flex;                
+                        font-size: 18px;
+                        font-weight: lighter;
+                        color: gray;     
+                        padding-top: 5px;                
+                        }
+            }
+    }
+
+        .tuto{
+            &__icon{
+                position: relative;
+                left: -20px;
+                width: 20px;
+            }
+                &__etape{
+                    width: 99%;
+                    height: 80px;
+                    &1::before{                       
+                        width: 25px;
+                        height: 20px;                                         
+                    }
+                    &2::before{                       
+                        width: 25px;
+                        height: 20px;                        
+                    }
+                    &3::before{                       
+                        width: 25px;
+                        height: 20px;                     
+                    }
+                    }
+                    &__text {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        position: relative;
+                        left: -22px;
+                        width:100%;
+                        font-size: 17px;
+                        font-weight: bold;
+                    }     
+                
+            }
+        
+        .restaurants{
+            background: #f6f6f6;
+            height: 1400px;
+            width: 100%;
+            .container{
+                margin: 0;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            &__titre{
+                font-size: 25px;
+            }
+        
+        }
+        
+        .cartes{
+            width:95%;
+            margin:0px;
+            display: flex;
+            align-items:center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;    
+            
+        }
+        
+        .carte{
+            width: 90%;
+            height: 300px;
+            margin-bottom: 30px;  
+            display: flex;
+            flex-direction: column;  
+                &__footer::before{
+                    content: "Nouveau";    
+                    position: relative;
+                    top: -220%;
+                    left: 80%;    
+                    display: flex;
+                    justify-content: center;
+                    background: #99E2D0;
+                    width: 85px;
+                    height: 21px;
+                    padding-left: 2px;
+                    padding-right: 2px;
+                    color: #328570;
+                    font-size: 15px;   
+                    font-weight: bold;
+                    font-family: 'Roboto','verdana'; 
+                }
+                &__footer,&__footerBIS{
+                    display: flex;
+                    background: white;
+                    border: 0px solid transparent;
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    box-shadow:1px 2px 8px 5px rgba(216,216,216,0.56);
+                    height: 85px;
+                }
+                &__contenu,&__contenu1{
+                    display: flex;
+                    flex-direction: column;
+                }
+                &__contenu1{
+                    margin-left:-80px ;
+                }
+                &__titre{
+                    font-size: 20px;
+                    padding-top: 10px ;
+                    padding-left: 10px;
+                    width: 80%;
+                }
+                &__sous-titre{
+                    font-size: 18px;
+                    padding-left: 10px;
+                    padding-bottom: 10px;
+                }
+            }        
+        }
+    
+@media all and (max-width:470px) {
+    
+
+        .carte{
+            width: 90%;
+            height: 300px;
+            margin-bottom: 30px;  
+            display: flex;
+            flex-direction: column;  
+                &__footer::before{
+                    content: "Nouveau";    
+                    position: relative;
+                    top: -220%;
+                    left: 70%;    
+                    display: flex;
+                    justify-content: center;
+                    background: #99E2D0;
+                    width: 85px;
+                    height: 21px;
+                    padding-left: 2px;
+                    padding-right: 2px;
+                    color: #328570;
+                    font-size: 15px;   
+                    font-weight: bold;
+                    font-family: 'Roboto','verdana'; 
+                }
+            }
+}

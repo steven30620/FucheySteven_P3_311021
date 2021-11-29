@@ -1,0 +1,520 @@
+@font-face
+  /*Téléchargement de la police Shrikhand et Roboto */
+    {
+    font-family: 'Shrikhand';
+    src: url('../../../../../fonts/Shrikland/shrikhand-regular.woff'),  url('../../../../../fonts/Shrikland/shrikhand-regular.woff2');
+}
+
+@font-face{
+    font-family: 'Roboto';
+    src: url('../../../../../fonts/Roboto/roboto-regular-webfont.woff'),url('../../../../../fonts/Roboto/roboto-regular-webfont.woff2');
+}
+
+// Import des ressource sass
+@import '../../../src/keyframes';
+@import '../../../src/placeholders';
+
+// loader
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.box-loader{
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(71, 71, 71, 0.322);
+    position: fixed;
+    animation: fade_out 4s ease forwards;
+}
+
+
+
+.loader {
+    position: fixed;
+    top: 35%;
+    left: 46%;
+    border-top: 16px solid #9356DC;
+    border-right: 16px solid #FF79DA;
+    border-bottom: 16px solid #99E2D0;
+    border-left: 16px solid #f6f6f6;
+    background-color:  rgb(161, 161, 161) ;
+    border-radius: 60px ;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.5s linear infinite;
+    
+    
+}
+
+
+/* Header */ 
+
+*{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family:'Roboto',verdana;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+h2{
+    font-weight: normal;
+    font-size: 28px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+        &__logo{
+            width: 300px;
+            font-family: 'Shrikhand', verdana;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            
+        }
+        &__btn{
+            position: absolute;
+            left: 5px;
+            width: 30px;
+            margin-left: 15px;
+        }
+}
+
+.illustration{
+    display: flex;
+    max-height: 400px;
+    width: 100%;
+    &__img{
+        object-fit: cover;
+
+    }
+}
+
+.central{
+    height: 570px;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    position:absolute;
+    left:12%;
+    width: 75%;
+    margin-top: -80px ;
+    .container{
+        background-color: #f6f6f6;
+        border-top-left-radius: 50px ;
+        border-top-right-radius: 50px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 650px;
+    } 
+    &__restaurant-nom{
+        display: flex;
+        align-items: flex-start;
+        font-family: 'Shrikhand','verdana';
+        font-size: 35px;
+        padding-top: 20px;
+        padding-left: 5%;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    &__btn{
+        @extend %btn-fav;
+        position:relative;
+        top: -18px;
+        left: 20px;
+    }
+    &__titre{
+        text-transform:uppercase;
+        font-family: 'Roboto','verdana';
+        width: 10%;
+        padding-bottom: 7px;
+        border-bottom: 3px solid #99E2D0;
+    }
+    // DEBUT STYLES CARTES
+    &__cartes{
+        display: flex;
+        justify-content: space-evenly;
+        .btn-food {
+            @extend %menu-food;
+            background: linear-gradient(to left, #99E2D0 50%, #fff 50%);
+            background-size: 200% 100%;
+            background-position: left;
+            transition: all 0.3s ease-out;
+    
+            &:hover {
+                cursor: pointer;
+                background-position: 20%;
+    
+                .check-icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    left: -24px;
+                    top: 12px;
+                    font-size:25px;
+                    width: 25px;
+                    color: #fff;
+                    animation: rotation 0.5s ease-in;
+                }
+    
+                .price {
+                    animation: slide-right 0.4s ease-in;
+                    align-items: flex-start;
+                    position: relative;
+                    left: -25%;
+                    width: 10px;
+                }
+    
+                h4, p {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    width: 250px;
+                }
+            }
+        }
+        .menu-1 {
+            animation: slide_down 1.2s ease-in-out;
+        }
+        
+        .menu-2 {
+            animation: slide_down 1.4s ease-in-out;
+        }
+        
+        .menu-3 {
+            animation: slide_down 1.6s ease-in-out;
+        }
+        
+        .menu-4 {
+            animation: slide_down 1.8s ease-in-out;
+        }
+    }
+    &__entrees{
+        width: 30%;
+    }
+    
+}
+
+
+
+.footer-menu{
+    padding-top: 70px;
+    display: flex; 
+    justify-content: center;   
+        button{
+            position: absolute;
+            top: 88%;
+            display: flex;
+            justify-content: center;
+            width: 280px;
+            font-size: 25px;
+            padding-top: 10px;
+            padding-bottom: 15px;
+            border: 0px solid transparent;
+            border-radius: 100px;
+            color: white;
+            background: rgb(255,140,245);
+            background: linear-gradient(175deg, rgba(255,140,245,1) 30%, rgba(99,44,142,1) 99%);
+            &:hover{
+                background: linear-gradient(175deg, rgb(252, 149, 243) 30%, rgb(121, 59, 168) 99%);
+                cursor: pointer;
+            }
+    }
+}
+
+.footer{
+    .container{
+        height: 250px;
+        background: #353535;
+        display: flex;
+        flex-direction: column;
+        
+    }
+        &__logo{
+            color: white;
+            font-family:'Shrikhand','verdana' ;
+            font-size: 30px;
+            margin-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            width: 150px;
+            
+        }
+        a{
+            color: white;
+        }
+        &__icon{
+            width: 20px;
+            margin-right: 8px;
+            margin-left: 5px;
+        }
+        &__list-contenu{
+            display: flex;
+            flex-direction: row;
+            font-size: 20px;
+            margin-left: 20px;
+            margin-top: 5px;
+            width: 300px;
+        }
+        
+}
+
+@media all and (max-width:1650px) {
+    .central{
+        height:1420px;
+
+    }
+    .menu{
+        display: flex;
+        flex-direction: row;
+        position:absolute;
+        left:5%;
+        width: 90%;
+        margin-top: -80px ;
+        .container{
+            background-color: #f6f6f6;
+            border-top-left-radius: 50px ;
+            border-top-right-radius: 50px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 1500px;
+        } 
+        &__restaurant-nom{
+            display: flex;
+            align-items: flex-start;
+            font-family: 'Shrikhand','verdana';
+            font-size: 35px;
+            padding-top: 20px;
+            padding-left: 5%;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+        &__btn{
+            position:relative;
+            top: -18px;
+            left: 20px;
+        }
+        &__titre{
+            text-transform:uppercase;
+            font-family: 'Roboto','verdana';
+            width: 10%;
+            padding-bottom: 7px;
+            border-bottom: 3px solid #99E2D0;
+        }
+        // DEBUT STYLES CARTES
+        &__cartes{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .btn-food {
+                background-size: 200% ;
+                background-position: left;
+                transition: all 0.3s ease-out;
+        
+                &:hover {
+                    cursor: pointer;
+                    background-position: -100px;
+        
+                    .check-icon {
+                        display: flex;
+                        position: relative;
+                        width: 25px;
+                        left: -28px;
+                        margin: 0;
+                        font-size: 25px;
+                        color: rgb(255, 255, 255);
+                        animation: rotation 0.5s ease-in;
+                    }
+        
+                    .price {
+                        animation: slide-right 0.4s ease-in;
+                        align-items: flex-start;
+                        width: 20px;
+                    }
+        
+                    h4, p {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        width: 380px;
+                    }
+                }
+            }
+        }
+        &__entrees{
+            width: 92%;
+            padding-left: 30px;
+        }
+    } 
+    .footer-menu{  
+            button{
+                position: absolute;
+                top: 95%;
+                
+        }
+    }
+}
+
+
+@media all and (max-width:770px) {
+    .central{
+        height:1420px;
+
+    }
+    .menu{
+        &__restaurant-nom{
+            width:70%;
+            padding: 10px 0 0 20px;
+        }
+        &__entrees{
+            width: 85%;
+            padding-left: 30px;
+        }
+        display: flex;
+        flex-direction: row;
+        position:absolute;
+        margin-top: -80px ;
+        left:0;
+        width: 100%;
+        .container{
+            background-color: #f6f6f6;
+            border-top-left-radius: 50px ;
+            border-top-right-radius: 50px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 1500px;
+        } 
+        
+        &__titre{
+            text-transform:uppercase;
+            font-family: 'Roboto','verdana';
+            width: 10%;
+            padding-bottom: 7px;
+            border-bottom: 3px solid #99E2D0;
+        }
+        // DEBUT STYLES CARTES
+        &__cartes{
+            .btn-food {
+                background-size: 201% ;
+                &:hover {
+                    .price {
+                        width: 20px;
+                        left: -25%;
+                    }
+                    h4, p {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        width: 200px;
+                    }
+                }
+            }
+        }
+        
+    } 
+}
+
+@media all and (max-width:450px) {
+    h4, p {
+        font-size: 17px !important;
+    }
+    .price{
+        font-size: 15px;
+    } 
+        .menu{
+        &__restaurant-nom{
+            font-size: 30px;
+        }
+        &__entrees{
+            width: 85%;
+            padding-left: 30px;
+        }
+        display: flex;
+        flex-direction: row;
+        position:absolute;
+        margin-top: -80px ;
+        left:0;
+        width: 100%;
+        // DEBUT STYLES CARTES
+        &__cartes{
+            .btn-food {
+                background-size: 201% ;
+                &:hover {
+                    .price {
+                        width: 20px;
+                        left: -35%;
+                    }
+                    h4, p {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        width: 150px;
+                    }
+                }
+            }
+        }
+        
+    } 
+} 
+
+@media all and (max-width:350px) {
+    h4, p {
+        font-size: 16px !important;
+    }
+    .price{
+        font-size: 15px;
+    } 
+        .menu{
+        &__restaurant-nom{
+            font-size: 30px;
+        }
+        &__entrees{
+            width: 80%;
+            padding-left: 30px;
+        }
+        display: flex;
+        flex-direction: row;
+        position:absolute;
+        margin-top: -80px ;
+        left:0;
+        width: 100%;
+        // DEBUT STYLES CARTES
+        &__cartes{
+            .btn-food {
+                background-size: 201% ;
+                &:hover {
+                    .price {
+                        width: 20px;
+                        left: -45%;
+                    }
+                    h4, p {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        width: 100px;
+                    }
+                }
+            }
+        }
+        
+    } 
+} 
