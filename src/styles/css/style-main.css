@@ -1,12 +1,12 @@
 @charset "UTF-8";
 @font-face /*Téléchargement de la police Shrikhand et Roboto */ {
   font-family: 'Shrikhand';
-  src: url("../../../../fonts/Shrikland/shrikhand-regular.woff"), url("../../../../fonts/Shrikland/shrikhand-regular.woff2");
+  src: url("../fonts/Shrikland/shrikhand-regular.woff"), url("../fonts/Shrikland/shrikhand-regular.woff2");
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../../../../fonts/Roboto/roboto-regular-webfont.woff"), url("../../../../fonts/Roboto/roboto-regular-webfont.woff2");
+  src: url("../fonts/Roboto/roboto-regular-webfont.woff"), url("../fonts/Roboto/roboto-regular-webfont.woff2");
 }
 
 @-webkit-keyframes color {
@@ -200,6 +200,19 @@
           animation: color 1s ease forwards;
 }
 
+.tuto__etape1::before, .tuto__etape2::before, .tuto__etape3::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 22px;
+  background: #9356DC;
+  border-radius: 100px;
+  position: absolute;
+}
+
 .box-loader {
   z-index: 9999;
   width: 100%;
@@ -290,7 +303,10 @@ a:visited {
   width: 200px;
 }
 
-.local h2 {
+.local .recherche {
+  text-align: center;
+  background-color: transparent;
+  border: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -299,16 +315,22 @@ a:visited {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  font-size: 20px;
+  font-size: 21px;
+  font-family: 'Roboto','verdana';
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   color: #5e5c5c;
 }
 
+.local .placeholder {
+  padding-left: 20px;
+}
+
 .local i {
   width: 20px;
   padding-top: 3px;
+  color: #5e5c5c;
 }
 
 .reservez {
@@ -372,6 +394,8 @@ a:visited {
   padding-bottom: 10px;
   border: 0px solid transparent;
   border-radius: 100px;
+  -webkit-box-shadow: 2px 2px 10px 1px rgba(124, 124, 124, 0.56);
+          box-shadow: 2px 2px 10px 1px rgba(124, 124, 124, 0.56);
   color: white;
   background: #ff8cf5;
   background: linear-gradient(175deg, #ff8cf5 30%, #632c8e 99%);
@@ -380,6 +404,8 @@ a:visited {
 .btn-reservez button:hover {
   background: linear-gradient(175deg, #fc95f3 30%, #793ba8 99%);
   cursor: pointer;
+  -webkit-box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.56);
+          box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.56);
 }
 
 ol {
@@ -428,6 +454,14 @@ ol {
   margin-top: 25px;
 }
 
+.tuto li:hover {
+  background-color: #f4e5fc;
+}
+
+.tuto li:hover .tuto__icon {
+  color: #8f2a8f;
+}
+
 .tuto__etape {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -451,46 +485,16 @@ ol {
 
 .tuto__etape1::before {
   content: "1";
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 22px;
-  background: #9356DC;
-  border-radius: 100px;
-  position: absolute;
   left: 10.6%;
 }
 
 .tuto__etape2::before {
   content: "2";
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 22px;
-  background: #9356DC;
-  border-radius: 100px;
-  position: absolute;
   left: 37.5%;
 }
 
 .tuto__etape3::before {
   content: "3";
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 22px;
-  background: #9356DC;
-  border-radius: 100px;
-  position: absolute;
   left: 64.7%;
 }
 
@@ -591,6 +595,7 @@ ol {
       -ms-flex-pack: center;
           justify-content: center;
   background: #99E2D0;
+  border-radius: 6px;
   width: 85px;
   height: 30px;
   padding-left: 2px;

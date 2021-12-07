@@ -2,17 +2,17 @@
   /*Téléchargement de la police Shrikhand et Roboto */
     {
     font-family: 'Shrikhand';
-    src: url('../../../../fonts/Shrikland/shrikhand-regular.woff'),  url('../../../../fonts/Shrikland/shrikhand-regular.woff2');
+    src: url('../fonts/Shrikland/shrikhand-regular.woff'),  url('../fonts/Shrikland/shrikhand-regular.woff2');
 }
 
 @font-face{
     font-family: 'Roboto';
-    src: url('../../../../fonts/Roboto/roboto-regular-webfont.woff'),url('../../../../fonts/Roboto/roboto-regular-webfont.woff2');
+    src: url('../fonts/Roboto/roboto-regular-webfont.woff'),url('../fonts/Roboto/roboto-regular-webfont.woff2');
 }
 
 // Import des resssource sass
-@import '../../src/keyframes';
-@import '../../src/placeholders';
+@import './src/keyframes';
+@import './src/placeholders';
 // loader
 
 .box-loader{
@@ -91,17 +91,25 @@ a:visited {
         text-align: center;
         width: 200px;
     }
-        h2{
+        .recherche{
+            text-align: center;
+            background-color: transparent;
+            border: none;
             display: flex;
             width: 200px;
             flex-direction: row;            
-            font-size: 20px;
+            font-size: 21px;
+            font-family: 'Roboto','verdana';
             justify-content: center;
             color: rgb(94, 92, 92);
+        }
+        .placeholder{
+            padding-left: 20px;
         }
         i{
             width: 20px;
             padding-top:3px;
+            color: rgb(94, 92, 92);
         }
 }
 
@@ -139,12 +147,14 @@ a:visited {
             padding-bottom: 10px;
             border: 0px solid transparent;
             border-radius: 100px;
+            box-shadow:2px 2px 10px 1px rgba(124, 124, 124, 0.56);
             color: white;
             background: rgb(255,140,245);
             background: linear-gradient(175deg, rgba(255,140,245,1) 30%, rgba(99,44,142,1) 99%);
             &:hover{
                 background: linear-gradient(175deg, rgb(252, 149, 243) 30%, rgb(121, 59, 168) 99%);
                 cursor: pointer;
+                box-shadow:2px 2px 10px 1px rgba(0, 0, 0, 0.56);
             }
     }
 }
@@ -175,6 +185,13 @@ ol{
             justify-content: space-between;
             margin-top: 25px;
             }
+        li:hover{
+            .tuto__icon{
+                color: rgb(143, 42, 143); 
+            }
+            background-color: rgb(244, 229, 252);
+        }
+            
         &__etape{
             display: flex;
             flex-direction: row;
@@ -188,32 +205,17 @@ ol{
             box-shadow:1px 2px 8px 1px rgba(216,216,216,0.56);
                 &1::before{
                     content: "1";
-                    display: flex;                    
-                    justify-content: center;
-                    width: 22px;
-                    background: #9356DC;
-                    border-radius: 100px;
-                    position: absolute;
+                    @extend %tuto;
                     left: 10.6%;                    
                 }
                 &2::before{
                     content: "2";
-                    display: flex;                    
-                    justify-content: center;
-                    width: 22px;
-                    background: #9356DC;
-                    border-radius: 100px;
-                    position: absolute;
+                    @extend %tuto;
                     left: 37.5%;
                 }
                 &3::before{
                     content: "3";
-                    display: flex;                    
-                    justify-content: center;
-                    width: 22px;
-                    background: #9356DC;
-                    border-radius: 100px;
-                    position: absolute;
+                    @extend %tuto;
                     left: 64.7%;
                 }
             }
@@ -288,6 +290,7 @@ ol{
             display: flex;
             justify-content: center;
             background: #99E2D0;
+            border-radius: 6px;
             width: 85px;
             height: 30px;
             padding-left: 2px;
